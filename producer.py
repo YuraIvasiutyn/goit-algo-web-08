@@ -15,7 +15,6 @@ for _ in range(10):
         email=fake.email()
     ).save()
 
-    # Відправляємо ID у чергу
     channel.basic_publish(
         exchange='',
         routing_key='email_queue',
